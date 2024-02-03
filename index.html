@@ -7,8 +7,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="content">
+    <div id="gameui" class="gameui">
+      <h1>T3 Game</h1>
+      <div class="content">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <button id="rstBtn" class="rstBtn" onclick="location.reload()">Restart Game</button>
     </div>
-    <script src="app.js"></script>
+    <div class="msg-cont">
+      <div class="message" id="msg"></div>
+      <button id="rstBtn" class="rstBtn" onclick="location.reload()">New Game</button>
+    </div>
+    <script src="app.js" defer></script>
 </body>
 </html>

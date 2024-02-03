@@ -1,0 +1,70 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.gameui {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 4rem;
+}
+h1{
+  font-size: 4rem;
+  padding: 0;
+  margin: 0;
+}
+.content {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+  grid-template-columns: repeat(3, auto);
+}
+.blur {
+  filter: blur(5px);
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #fff;
+  font-size: 6rem;
+  flex: 1 1 auto;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.msg-cont {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.message {
+  font-size: 4rem;
+}
+.rstBtn {
+  font-size: 3rem;
+}
