@@ -3,6 +3,8 @@ const mstBoard = document.querySelector(".msg-cont")
 const ui = document.getElementById("gameui")
 const msg = document.getElementById("msg")
 let turnx = true;
+let count = 0;
+let wingame = false;
 const wins = [
   [0, 1, 2],
   [3, 4, 5],
@@ -24,6 +26,8 @@ cell.forEach((cel)=> {
       turnx = true;
     }
     checkWin();
+    count++;
+    dwaw()
   }, {once: true})
 });
 
@@ -36,8 +40,17 @@ const checkWin = () => {
       if (c1 === c2 && c2 === c3){
         mstBoard.style.visibility = "visible";
         ui.classList.add("blur")
-        msg.innerText = `${c1} is the Winner!!!`
+        msg.innerText = `${c1} is the Winner!!!`;
+        wingame = true;
       }
     }
+  }
+}
+
+function dwaw() {
+  if (count > 8 && !wingame) {
+    mstBoard.style.visibility = "visible";
+    ui.classList.add("blur")
+    msg.innerText = "It's a Draw"
   }
 }
